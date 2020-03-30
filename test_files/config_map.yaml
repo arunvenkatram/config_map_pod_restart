@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-config
+  annotations:
+    k8s.com/podDeleteMatch: "app=cm_restart"
+data:
+  config.cfg:
+    MSG="this is gonna be changed"
